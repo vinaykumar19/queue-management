@@ -1,0 +1,23 @@
+<div class="container" style="text-align:center">
+    <div class="row" style="text-align:center">
+        <div class="col-md-12" style="font-size:22px"> All Details </div>
+        <br><br><br><br>
+    </div>
+    
+    <table>
+        <tr>
+          <th>Waiting</th>
+          <th>Completed</th>
+          <th>Total : {{ total }}</th>
+        </tr>
+        <tr *ngFor="let details of data">
+          <td>{{ details.tokenName }}</td>
+          <td><a [routerLink] = "['/view',details.other.pid]">{{ details.name }}</a></td>
+          <td>{{ details.createdAt | date:"dd.MM" }}</td>
+        </tr>
+        
+        
+      </table>
+      
+
+</div>

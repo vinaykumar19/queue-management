@@ -32,7 +32,7 @@ private handlerError(err:HttpErrorResponse){
 }
   
 // method to return all details
-public getAllBlogs(): any{
+public getAllDetails(): any{
 
   let myResponse = this. _http.get(this.baseUr1);
   console.log(myResponse);

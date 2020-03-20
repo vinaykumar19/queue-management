@@ -1,0 +1,15 @@
+table{
+    margin-left:32%;
+    background-color: #eee;
+    line-height: 3;
+    text-align: left;
+}
+ tr{
+border-bottom:1px solid #000;
+
+}
+a.routerlnk{
+    color:#000 !important;
+    font-size: 20px;
+    text-decoration: underline;
+}

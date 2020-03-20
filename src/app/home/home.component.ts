@@ -1,6 +1,6 @@
 
 //this is a by default statement 
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy,ViewChild } from '@angular/core';
 import { QueueHttpService } from '../queue-http.service';
 
 
@@ -15,32 +15,34 @@ import { QueueHttpService } from '../queue-http.service';
 
 export class HomeComponent implements OnInit, OnDestroy{
 
-
+  
   public data=[];
  public waiting;
  public completed;
  public total;
-
-
+public sortArray=[];
   constructor(public queueHttpService:QueueHttpService) {
 
-    console.log("Home component constructor called")
+    console.log("Home component constructor called");
+    
    }
 
   ngOnInit() {
     console.log("Home component OnInit called");
 
     this.queueHttpService.getAllDetails().subscribe((res)=>{
-      this.data = res
+     this.data = res.sort((a, b) => {
+        return a.tokenName - b.tokenName;
+      });
       this.total = res.length
       
+      
 
-      console.log(this.data);
+      
     })
     
-    
   
-    console.log(this.data);
+    console.log('here'+this.data);
   }
 ngOnDestroy(){
  console.log("Home component destroyed")

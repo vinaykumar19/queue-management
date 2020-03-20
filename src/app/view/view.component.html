@@ -3,11 +3,26 @@
         <div class="col-md-12" style="font-size:22px"> Personal Details </div>
         <br><br><br><br>
     </div>
-<div style="text-align: left;">
-PID : {{data.person_pid}}<br/>
-Name : {{data.person_full_name}}<br/>
-Gender :{{data.person_gender}}<br/>
-Age:{{data.person_age}}<br/>
-Phone:{{data.person_phone}}<br/>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" style="background-color: #eee;padding:0px !important">
+            <p class="fullname">{{data.person_full_name}}</p>
+            <!--<img src="https://p7.hiclipart.com/preview/858/581/271/user-computer-icons-system-chinese-wind-title-column.jpg" class="profile-icon">-->
+    <div class="col-md-6" style="text-align: left;">
+        PID<br/>
+        Name<br/>
+        Gender<br/>
+        Age<br/>
+        Phone<br/>
+    </div>
+    <div class="col-md-6" style="text-align: left;">
+        {{data.person_pid}}<br/>
+        {{data.person_full_name}}<br/>
+        {{data.person_gender}}<br/>
+        {{data.person_age}}<br/>
+        {{data.person_phone}}<br/>
+        </div>
+</div></div>
 </div>
+
 </div>

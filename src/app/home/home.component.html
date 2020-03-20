@@ -7,13 +7,13 @@
     <table>
         <tr>
           <th>Waiting</th>
-          <th text-align:center>Completed</th>
+          <th style="text-align:center;">Completed</th>
           <th>Total : {{ total }}</th>
         </tr>
-        <tr *ngFor="let details of data">
-          <td>{{ details.tokenName }}</td>
-          <td><a [routerLink] = "['/view',details.other.pid]">{{ details.name }}</a></td>
-          <td>{{ details.createdAt | date:"dd.MM" }}</td>
+        <tr *ngFor="let details of data ">
+          <td style="color: red;font-size: 20px;">{{ details.tokenName }}</td>
+          <td style="color:#000;"><a [routerLink] = "['/view',details.other.pid]" class="routerlnk">{{ details.name }}</a></td>
+          <td>{{ details.createdAt | date:"dd.MMM h:mm:ss a" }}</td>
         </tr>
         
         
